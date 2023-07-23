@@ -33,7 +33,7 @@ void printint(int num)
 
 	for(j = 0 ; j < size ; j++)
 	{
-		_putchar('0' + array[j]);
+		putchar('0' + array[j]);
 	}
 }
 void printstring(char *word)
