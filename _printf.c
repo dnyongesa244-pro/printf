@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 #include "main.h"
 void printint(int num)
 {
@@ -32,7 +33,19 @@ void printint(int num)
 
 	for(j = 0 ; j < size ; j++)
 	{
-		putchar('0' + array[j]);
+		_putchar('0' + array[j]);
+	}
+}
+void printstring(char *word)
+{
+	int i;
+	int x;
+	x = strlen(word);
+	i = 0;
+	while(i < x)
+	{
+		putchar(word[i]);
+		i++;
 	}
 }
 void print(const char *format, ...)
