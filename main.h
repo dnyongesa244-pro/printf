@@ -3,7 +3,7 @@
 
 void _printf(const char *arg, ...);
 
-int _putchar(char c);
+/*int _putchar(char c);*/
 
 void print(const char *format, ...);
 

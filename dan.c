@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <unistd.h>
 int _putchar(char c)
 {
@@ -10,7 +9,7 @@ int main(void)
 	ch = 'd';
 
 	_putchar(ch);
-	putchar('\n');
+	_putchar('\n');
 
 
 	return 0;
