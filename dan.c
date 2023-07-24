@@ -1,14 +1,16 @@
 #include <stdio.h>
-#include "main.h"
+#include <unistd.h>
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int main(void)
 {
-	int age = 2001;
-	char *name = "danie";
-	char ch = 'd';
-	float point = 3.543;
+        char ch;
+	ch = 'd';
 
-	print("%s\n", name);
-	print("%d", age);
+	_putchar(ch);
+	putchar('\n');
 
 
 	return 0;

@@ -1,6 +1,12 @@
+#include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include "main.h"
 #include <stdarg.h>
+int _putchar(char c)
+{
+        return (write(1, &c, 1));
+}
 void printint(int num)
 {
 	int i, j;
@@ -9,12 +15,12 @@ void printint(int num)
 	int size;
 	if(num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num *= -1;
 	}
 	if(num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 	size = 0;
 	temp = num;
@@ -33,9 +39,9 @@ void printint(int num)
 	}
 	for(i = size-1; i>=0 ; i--)
 	{
-		putchar('0' + array[i]);
+		_putchar('0' + array[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
 void printstring(char *word)
 {
@@ -46,12 +52,12 @@ void printstring(char *word)
 	
 	while(i<x)
 	{
-		putchar(word[i]);
+		_putchar(word[i]);
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
-void print(const char *format, ...)
+void _printf(const char *format, ...)
 {
         va_list args;
         va_start(args, format);
@@ -90,14 +96,14 @@ void print(const char *format, ...)
                                         }
                                 default:
                                         {
-                                                putchar(*format);
+                                                _putchar(*format);
                                                 break;
                                         }
                         }
                 }
                 else
                 {
-                        putchar(*format);
+                        _putchar(*format);
                 }
                 format++;
         }
@@ -112,9 +118,9 @@ int main(void)
 	
     name = "daniel";
     
-    print("%s",name);
+    _printf("%s",name);
 	x = 309;
-
-	
-	print("%d",x);
+	_printf("%d", x);
 }
+	
+
