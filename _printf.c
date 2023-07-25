@@ -54,7 +54,7 @@ int _printf(const char *format, ...)
 }
 
 /**
- * print_buffer - function thar Prints the contents of the buffer if it exist
+ * print_buffer - function to Print contents of the buffer if it exist
  *
  * @buffer: Array of chars (parameter)
  *
