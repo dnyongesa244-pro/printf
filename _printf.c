@@ -58,8 +58,7 @@ int _printf(const char *format, ...)
  *
  * @buffer: Array of chars (parameter)
  *
- * @buff_ind: Index at which to add next char, represents the length. (parameter)
- */
+ * @buff_ind: Index at which to add next char, represents the length.  */
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
